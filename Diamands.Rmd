@@ -1,0 +1,57 @@
+---
+title: "exploring Diamonds"
+author: "Ryan Strong"
+date: "9/21/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Reading my Diamonds dataset
+
+```{r}
+library(readxl)
+mydiamonds=read_excel("diamonds.xlsx")
+
+
+```
+
+My answer to the question
+
+```{r}
+mydiamonds[50000,3]
+```
+
+Now im going to see the first six rows using the head comand
+
+```{r}
+library(readxl)
+head(mydiamonds)
+tail(mydiamonds) # last 6 rows
+```
+
+```{r}
+summary (mydiamonds)
+```
+
+making the cut variable a factor variable
+
+
+```{r}
+mydiamonds$cut=as.factor(mydiamonds$cut)
+summary(mydiamonds$cut)
+```
+
+```{r}
+mydiamonds$color=as.factor(mydiamonds$color)
+summary(mydiamonds$color)
+```
+
+```{r}
+table(mydiamonds$cut,mydiamonds$color)
+```
+
+
+

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"exploring Diamonds\"\nauthor: \"Ryan Strong\"\ndate: \"9/21/2017\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## Reading my Diamonds dataset\n\n```{r}\nlibrary(readxl)\nmydiamonds=read_excel(\"diamonds.xlsx\")\n\n\n```\n\nMy answer to the question\n\n```{r}\nmydiamonds[50000,3]\n```\n\nNow im going to see the first six rows using the head comand\n\n```{r}\nlibrary(readxl)\nhead(mydiamonds)\ntail(mydiamonds) # last 6 rows\n```\n\n```{r}\nsummary (mydiamonds)\n```\n\nmaking the cut variable a factor variable\n\n\n```{r}\nmydiamonds$cut=as.factor(mydiamonds$cut)\nsummary(mydiamonds$cut)\n```\n\n```{r}\nmydiamonds$color=as.factor(mydiamonds$color)\nsummary(mydiamonds$color)\n```\n\n```{r}\ntable(mydiamonds$cut,mydiamonds$color)\n```\n\n\n\n",
+    "created" : 1506022525177.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "6122502",
+    "id" : "CAC9FDE4",
+    "lastKnownWriteTime" : 1506026033,
+    "last_content_update" : 1506026033990,
+    "path" : "~/Desktop/Data Visualization/Diamands.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "last_setup_crc32" : "6FE42669bb338d19",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
